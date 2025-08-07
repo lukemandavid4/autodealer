@@ -1,29 +1,29 @@
-import { Instagram, MessageCircle, Music } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Instagram, MessageCircle, Music } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function SocialLinks() {
   const socialLinks = [
     {
-      name: 'WhatsApp',
+      name: "WhatsApp",
       icon: MessageCircle,
-      url: 'https://wa.me/1234567890',
-      color: 'hover:text-green-600',
-      description: 'Chat with us instantly'
+      url: "https://wa.me/1234567890",
+      color: "hover:text-green-600",
+      description: "Chat with us instantly",
     },
     {
-      name: 'Instagram',
+      name: "Instagram",
       icon: Instagram,
-      url: 'https://instagram.com/autodealerpro',
-      color: 'hover:text-pink-600',
-      description: 'Follow our latest updates'
+      url: "https://instagram.com/autodealerpro",
+      color: "hover:text-pink-600",
+      description: "Follow our latest updates",
     },
     {
-      name: 'TikTok',
+      name: "TikTok",
       icon: Music,
-      url: 'https://tiktok.com/@autodealerpro',
-      color: 'hover:text-black',
-      description: 'Watch our car videos'
-    }
+      url: "https://tiktok.com/@autodealerpro",
+      color: "hover:text-black",
+      description: "Watch our car videos",
+    },
   ];
 
   return (
@@ -34,8 +34,8 @@ export function SocialLinks() {
             Stay Connected
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Follow us on social media for the latest car arrivals, exclusive deals, 
-            and behind-the-scenes content.
+            Follow us on social media for the latest car arrivals, exclusive
+            deals, and behind-the-scenes content.
           </p>
         </div>
 
@@ -43,13 +43,13 @@ export function SocialLinks() {
           {socialLinks.map((social, index) => (
             <div
               key={social.name}
-              className="group relative bg-background rounded-xl p-6 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1"
+              className="group relative bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
               <div className="text-center space-y-4">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-hero rounded-full group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-[var(--primary)] rounded-full group-hover:scale-110 transition-transform duration-300">
                   <social.icon className="w-8 h-8 text-primary-foreground" />
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-semibold text-automotive-dark mb-2">
                     {social.name}
@@ -62,7 +62,7 @@ export function SocialLinks() {
                 <Button
                   asChild
                   variant="outline"
-                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors cursor-pointer"
                 >
                   <a
                     href={social.url}
@@ -84,12 +84,13 @@ export function SocialLinks() {
 
         {/* Quick Contact CTA */}
         <div className="text-center mt-12">
-          <div className="bg-gradient-hero rounded-xl p-8 text-center">
+          <div className="bg-[var(--primary)] rounded-xl p-8 text-center">
             <h3 className="text-2xl font-bold text-primary-foreground mb-4">
               Need Immediate Assistance?
             </h3>
-            <p className="text-primary-foreground/80 mb-6">
-              Our team is ready to help you find your perfect car. Contact us now!
+            <p className="text-white mb-6">
+              Our team is ready to help you find your perfect car. Contact us
+              now!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -98,7 +99,10 @@ export function SocialLinks() {
                 variant="secondary"
                 className="bg-background text-automotive-dark hover:bg-[var(--primary)] hover:text-white transition duration-300"
               >
-                <a href="tel:+1234567890" className="flex items-center space-x-2">
+                <a
+                  href="tel:+1234567890"
+                  className="flex items-center space-x-2"
+                >
                   <MessageCircle className="w-5 h-5" />
                   <span>Call 0723739283</span>
                 </a>
@@ -109,9 +113,9 @@ export function SocialLinks() {
                 variant="secondary"
                 className="bg-background text-automotive-dark hover:bg-[var(--primary)] hover:text-white transition duration-300"
               >
-                <a 
-                  href="https://wa.me/1234567890" 
-                  target="_blank" 
+                <a
+                  href="https://wa.me/1234567890"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2"
                 >

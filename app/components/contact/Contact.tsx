@@ -30,7 +30,6 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     // toast({
@@ -59,7 +58,7 @@ export function Contact() {
     {
       icon: Phone,
       title: "Call Us",
-      details: "(555) 123-4567",
+      details: "0700577740",
       description: "Mon-Sat 9AM-7PM, Sun 11AM-5PM",
     },
     {
@@ -71,7 +70,7 @@ export function Contact() {
     {
       icon: MapPin,
       title: "Visit Showroom",
-      details: "123 Auto Plaza, City, ST 12345",
+      details: "123 Auto Plaza, Nairobi",
       description: "Free parking available",
     },
     {
@@ -83,9 +82,8 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-muted/30">
+    <div id="contact" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        {/* Header */}
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-automotive-dark">
             Get In Touch
@@ -95,15 +93,12 @@ export function Contact() {
             personalized assistance, financing options, and exclusive deals.
           </p>
         </div>
-
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Contact Information */}
           <div className="lg:col-span-1">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-automotive-dark mb-6">
                 Contact Information
               </h3>
-
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="bg-primary/10 p-3 rounded-lg">
@@ -122,23 +117,19 @@ export function Contact() {
                   </div>
                 </div>
               ))}
-
-              {/* Map placeholder */}
               <div className="mt-8">
                 <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
                   <div className="text-center">
                     <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
                     <p className="text-muted-foreground">Interactive Map</p>
                     <p className="text-sm text-muted-foreground">
-                      123 Auto Plaza, City, ST
+                      123 Auto Plaza, Nairobi
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Contact Form */}
           <div className="lg:col-span-2">
             <Card className="shadow-elegant border-0">
               <CardHeader>
@@ -148,7 +139,6 @@ export function Contact() {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Personal Information */}
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium mb-2">
@@ -174,11 +164,10 @@ export function Contact() {
                         onChange={(e) =>
                           handleInputChange("phone", e.target.value)
                         }
-                        placeholder="(555) 123-4567"
+                        placeholder="0700577740"
                       />
                     </div>
                   </div>
-
                   <div>
                     <label className="block text-sm font-medium mb-2">
                       Email Address *
@@ -193,8 +182,6 @@ export function Contact() {
                       placeholder="john@example.com"
                     />
                   </div>
-
-                  {/* Car Interest */}
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium mb-2">
@@ -240,8 +227,6 @@ export function Contact() {
                       </Select>
                     </div>
                   </div>
-
-                  {/* Message */}
                   <div>
                     <label className="block text-sm font-medium mb-2">
                       Message
@@ -253,14 +238,13 @@ export function Contact() {
                       }
                       placeholder="Tell us about your car preferences, budget, or any specific questions..."
                       rows={4}
+                      className="outline-0"
                     />
                   </div>
-
-                  {/* Submit Button */}
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-hero text-lg py-3"
+                    className="w-full bg-[var(--primary)] text-lg py-3"
                   >
                     {isSubmitting ? (
                       <div className="flex items-center space-x-2">
@@ -274,7 +258,6 @@ export function Contact() {
                       </div>
                     )}
                   </Button>
-
                   <p className="text-xs text-muted-foreground text-center">
                     By submitting this form, you agree to our privacy policy and
                     terms of service.
@@ -285,6 +268,6 @@ export function Contact() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

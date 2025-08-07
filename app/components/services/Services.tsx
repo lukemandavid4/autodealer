@@ -176,7 +176,7 @@ export default function Services() {
                     />
                   ))}
                 </div>
-                <Button className="w-full bg-gradient-hero">
+                <Button className="w-full bg-[var(--primary)]">
                   Schedule Service
                 </Button>
               </div>
