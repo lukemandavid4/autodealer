@@ -13,7 +13,7 @@ export const mockCars: Car[] = [
     specifications: {
       mileage: 15000,
       transmission: 'CVT',
-      fuelType: 'Gasoline',
+      fuelType: 'Petrol',
       engineCapacity: '2.0L',
       bodyType: 'Sedan',
       color: 'Midnight Black Metallic',
@@ -43,7 +43,7 @@ export const mockCars: Car[] = [
     specifications: {
       mileage: 28000,
       transmission: 'Automatic',
-      fuelType: 'Gasoline',
+      fuelType: 'Petrol',
       engineCapacity: '2.0L Turbo',
       bodyType: 'Sedan',
       color: 'Alpine White',
@@ -73,7 +73,7 @@ export const mockCars: Car[] = [
     specifications: {
       mileage: 12000,
       transmission: 'CVT',
-      fuelType: 'Gasoline',
+      fuelType: 'Petrol',
       engineCapacity: '1.5L Turbo',
       bodyType: 'SUV',
       color: 'Metallic Slate Blue',
@@ -133,7 +133,7 @@ export const mockCars: Car[] = [
     specifications: {
       mileage: 22000,
       transmission: 'Automatic',
-      fuelType: 'Gasoline',
+      fuelType: 'Petrol',
       engineCapacity: '3.5L V6 Turbo',
       bodyType: 'Pickup Truck',
       color: 'Agate Black Metallic',
@@ -163,7 +163,7 @@ export const mockCars: Car[] = [
     specifications: {
       mileage: 8500,
       transmission: 'Automatic',
-      fuelType: 'Gasoline',
+      fuelType: 'Petrol',
       engineCapacity: '2.0L TFSI',
       bodyType: 'Sedan',
       color: 'Glacier White Metallic',

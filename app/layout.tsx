@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import CursorTrail from "@/app/components/cursorTrail /CursorTrail";
 import "./globals.css";
 import Layout from "./components/layout";
 
@@ -20,10 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${montserrat.variable} antialiased`}
-      >
-        <Layout>{children}</Layout>
+      <body className={`${montserrat.variable} antialiased`}>
+        <Layout>
+          <CursorTrail />
+          {children}
+        </Layout>
       </body>
     </html>
   );

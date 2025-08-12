@@ -159,3 +159,24 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .cursor-ring {
+    @apply fixed w-6 h-6 border-2 border-cyan-400 rounded-full pointer-events-none;
+    box-shadow: 0 0 6px #0ff, 0 0 12px #0ff;
+    transform: translate(-50%, -50%) scale(0.5);
+    animation: ring-expand 0.6s ease-out forwards;
+  }
+}
+
+@keyframes ring-expand {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
+

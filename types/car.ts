@@ -10,7 +10,7 @@ export interface Car {
   specifications: {
     mileage: number;
     transmission: 'Manual' | 'Automatic' | 'CVT';
-    fuelType: 'Gasoline' | 'Diesel' | 'Hybrid' | 'Electric';
+    fuelType: 'Petrol' | 'Diesel' | 'Hybrid' | 'Electric';
     engineCapacity: string;
     bodyType: string;
     color: string;
