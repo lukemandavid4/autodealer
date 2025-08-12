@@ -68,7 +68,6 @@ export default function Services() {
   return (
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center space-y-4 mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
             <Wrench className="w-4 h-4 mr-2" />
@@ -83,8 +82,6 @@ export default function Services() {
             best.
           </p>
         </div>
-
-        {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
@@ -95,8 +92,6 @@ export default function Services() {
             </div>
           ))}
         </div>
-
-        {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {services.map((service, index) => (
             <Card
@@ -127,8 +122,6 @@ export default function Services() {
             </Card>
           ))}
         </div>
-
-        {/* Service Guarantee */}
         <div className="bg-muted/30 rounded-2xl p-8 md:p-12">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>

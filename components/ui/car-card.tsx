@@ -78,7 +78,6 @@ export function CarCard({ car }: CarCardProps) {
 
   return (
     <Card className="group transition-all duration-300 bg-gradient-card border overflow-hidden hover:border-cyan-400 hover:shadow-[0_0_4px_#0ff,0_0_8px_#0ff]">
-      {/* Image */}
       <div className="relative aspect-[16/10] overflow-hidden">
         {!imageLoaded && (
           <div className="absolute inset-0 bg-muted animate-pulse flex items-center justify-center">
@@ -94,7 +93,6 @@ export function CarCard({ car }: CarCardProps) {
           )}
           onLoad={() => setImageLoaded(true)}
         />
-        {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
             <Button
@@ -108,11 +106,9 @@ export function CarCard({ car }: CarCardProps) {
             </Button>
           </div>
         </div>
-        {/* Status Badge */}
         <div className="absolute top-4 left-4">
           <Badge className={getStatusColor(car.status)}>{car.status}</Badge>
         </div>
-        {/* Featured Badge */}
         {car.featured && (
           <div className="absolute top-4 right-4">
             <Badge className="bg-gradient-premium text-accent-foreground shadow-premium">
@@ -121,9 +117,7 @@ export function CarCard({ car }: CarCardProps) {
           </div>
         )}
       </div>
-
       <CardContent className="p-6 space-y-4">
-        {/* Title & Price */}
         <div className="space-y-2">
           <h3 className="text-xl font-bold text-automotive-dark group-hover:text-primary transition-colors">
             {car.title}
@@ -137,8 +131,6 @@ export function CarCard({ car }: CarCardProps) {
             </span>
           </div>
         </div>
-
-        {/* Key Specs */}
         <div className="grid grid-cols-2 gap-4 text-sm">
           <div className="flex items-center space-x-2 text-muted-foreground">
             <Fuel className="w-4 h-4" />
@@ -157,15 +149,11 @@ export function CarCard({ car }: CarCardProps) {
             <span>{car.year}</span>
           </div>
         </div>
-
-        {/* Description */}
         <p className="text-muted-foreground text-sm line-clamp-2">
           {car.description}
         </p>
       </CardContent>
-
       <CardFooter className="p-6 pt-0 flex flex-col space-y-3">
-        {/* Book a Demo */}
         <div className="flex space-x-2 w-full">
           <Popover>
             <PopoverTrigger asChild>
@@ -191,16 +179,12 @@ export function CarCard({ car }: CarCardProps) {
             </PopoverContent>
           </Popover>
         </div>
-
-        {/* Booking Info */}
         {bookedInfo && (
           <div className="text-xs text-[var(--muted-foreground)]">
             Demo booked on {format(bookedInfo.date, "PP")} at {bookedInfo.time}
           </div>
         )}
       </CardFooter>
-
-      {/* Dialog */}
       <Dialog open={isDemoDialogOpen} onOpenChange={setIsDemoDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
@@ -211,8 +195,6 @@ export function CarCard({ car }: CarCardProps) {
                 : "Choose a date to continue"}
             </DialogDescription>
           </DialogHeader>
-
-          {/* Form */}
           <div className="grid gap-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="space-y-2">
@@ -258,8 +240,6 @@ export function CarCard({ car }: CarCardProps) {
               />
             </div>
           </div>
-
-          {/* Actions */}
           <DialogFooter className="gap-2">
             <Button
               variant="outline"
@@ -293,7 +273,7 @@ export function CarCard({ car }: CarCardProps) {
                 setTime("");
                 setNotes("");
               }}
-              className="bg-[var(--primary)] "
+              className="bg-[var(--primary)]"
             >
               Confirm Booking
             </Button>

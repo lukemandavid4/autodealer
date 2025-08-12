@@ -24,7 +24,7 @@ function Home() {
               <br />
               Today
             </h1>
-            <p className="text-lg md:text-xl text-[var(--muted-foreground)] max-w-2xl">
+            <p className="text-xs md:text-xl text-[var(--muted-foreground)] max-w-2xl">
               Discover premium vehicles with transparent pricing, comprehensive
               warranties, and exceptional customer service. Your perfect car is
               just a click away.
@@ -54,8 +54,6 @@ function Home() {
             ))}
           </div>
         </div>
-
-        {/* Hero Image */}
         <div className="">
           <div className="relative rounded-2xl overflow-hidden shadow-elegant">
             <img
@@ -63,15 +61,12 @@ function Home() {
               alt="Luxury car showcase"
               className="w-full h-auto object-cover"
             />
-
-            {/* Floating Elements */}
             <div className="absolute top-6 right-6 bg-background/95 backdrop-blur-sm rounded-xl p-4 shadow-card">
               <div className="text-sm text-muted-foreground">Starting from</div>
               <div className="text-2xl font-bold text-automotive-dark">
                 $24,500
               </div>
             </div>
-
             <div className="absolute bottom-6 left-6 bg-accent text-accent-foreground rounded-xl px-4 py-2 shadow-premium">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-accent-foreground rounded-full animate-pulse"></div>
@@ -79,8 +74,6 @@ function Home() {
               </div>
             </div>
           </div>
-
-          {/* Decorative elements */}
           <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-hero rounded-full opacity-20 blur-xl"></div>
           <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-premium rounded-full opacity-20 blur-xl"></div>
         </div>
